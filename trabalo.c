@@ -17,10 +17,13 @@ int main(){
 			break;		
 		case 3:
 			
-		break;				
+		break;			
+		default:
+		printf("opcao nao desponivel");
 	}
 	
 return 0;}
+
 void carroEstrutura(){
 	int i;
 	struct carro {
@@ -29,38 +32,42 @@ void carroEstrutura(){
 		int codigoDeVeiculo;
 		int anoDeFabricacao;
 	};
-for(i = 1; i < 11; i++){
-struct carro carro1;
-printf("Marca do veiculo: ");
-scanf("%s", &carro1.marca);
+	//for(i = 1; i < 11; i++){
+		struct carro carro1;
+		printf("Marca do veiculo: ");
+		scanf("%s", carro1.marca);
 
 
-printf("Modelo do veiculo: ");
-scanf("%s", &carro1.modelo);
+		printf("Modelo do veiculo: ");
+		scanf("%s", carro1.modelo);
 
-printf("codigo do veiculo: ");
-scanf("%d", &carro1.codigoDeVeiculo);
- 
- int opcaoCarro;
- printf("[1] proximo carro");
- printf("[2] gerar relatorio");
- switch(opcaoCarro){
- case 1:
- 	i = 1;
- 	break;
- case 2:
- 	i++;
- 	struct carro carro[i];
- 	break;
-	}
-}
+		printf("codigo do veiculo: ");
+		scanf("%d", &carro1.codigoDeVeiculo);
+		
+		/*int opcaoCarro;
+		printf("[1] proximo carro\n");
+		printf("[2] gerar relatorio\n");
+
+		scanf("%d", &opcaocarro);
+
+		switch(opcaoCarro){
+			case 1:
+				i = 1;
+			break;
+			case 2:
+				i++;
+				//struct carro carro[i];
+			break;
+		};
+	};*/
 
 
-FILE *eita;
+// o FILE não ta aceitando as variaveis do struct
+  FILE *eita;
     eita = fopen("C:/users/joaomarcelo.santos/Desktop/texto do trabas/eita.txt", "w");
 	
 	fprintf(eita, "marca do veiculo = %s modelo do veiculo = %s codigo do veiculo = %d", carro1.marca, carro1.modelo, carro1.codigoDeVeiculo);
 	
     fclose(eita);
-//printf("marca = %s modelo = %s codigo = %d", carro1.marca, carro1.modelo, carro1.codigoDeVeiculo);
-	}
+	printf("marca = %s modelo = %s codigo = %d", carro1.marca, carro1.modelo, carro1.codigoDeVeiculo);
+;}
