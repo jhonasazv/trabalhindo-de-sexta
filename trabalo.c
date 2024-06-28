@@ -37,7 +37,6 @@ void carroEstrutura(){
 		printf("Marca do veiculo: ");
 		scanf("%s", carro1.marca);
 
-
 		printf("Modelo do veiculo: ");
 		scanf("%s", carro1.modelo);
 
